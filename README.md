@@ -3,7 +3,6 @@ LocalResizeIMG
 
 # 前端HTML5本地压缩图片，兼容移动设备IOS,android。
 
-
 ## 概述
 * 通常压缩图片需要上传到后端，由后端处理。
 * 但是如果要上传的图片很大，特别是手机当场拍摄下来的照片（约2M+），那样效率会很低，用户也不会愿意等待。
@@ -16,7 +15,7 @@ LocalResizeIMG
 
 ## 使用方法
 具体详情请查看 源代码，或者 demo。
-```
+```javascript
 	$('input:file').localResizeIMG({
 	     width: 100,
 	     quality: 0.1,
@@ -38,3 +37,4 @@ LocalResizeIMG
 > ##### 技术： jquery
 > ##### 时间： 2014年5月
 > ##### 源码： [Guthub](https://github.com/think2011/LocalResizeIMG)
+> ##### 博客： [think2011](http://think2011.github.io)
