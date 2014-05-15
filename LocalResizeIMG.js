@@ -3,16 +3,18 @@
      * @param {Object} obj
      * @param {Number} [obj.width] 图片需要压缩的宽度，高度会跟随调整
      * @param {Number} [obj.quality=0.8] 压缩质量，不压缩为1
-     * @param {Function} [obj.before(this)] 处理前函数,this指向的是input:file
+     * @param {Function} [obj.before(this, blob, file)] 处理前函数,this指向的是input:file
      * @param {Function} obj.success(obj) 处理后函数
+     * @example
+     *
      */
     $.fn.localResizeIMG = function (obj) {
         this.on('change', function () {
-            // 执行前函数
-            if(isFinite(obj.before)) { obj.before(this) };
-
             var file = this.files[0];
             var blob = URL.createObjectURL(file);
+
+            // 执行前函数
+            if($.isFunction(obj.before)) { obj.before(this, blob, file) };
 
             _create(blob, file);
             this.value = '';   // 清空临时数据
@@ -76,9 +78,11 @@
 
 
     // 例子
+/*
     $('input:file').localResizeIMG({
         width: 100,
         quality: 0.1,
+        //before: function (_this, blob) {},
         success: function (result) {
             var img = new Image();
             img.src = result.base64;
@@ -87,3 +91,4 @@
             console.log(result);
         }
     });
+*/

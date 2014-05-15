@@ -13,6 +13,8 @@ LocalResizeIMG
 * 修复IOS压缩图片扭曲的问题。
 * 微信的话... 经过测试，目前新版本都支持触发上传了，大赞！XD
 
+![图1](http://think2011.qiniudn.com/LocalResizeIMG1.gif)
+
 ## 使用方法
 具体详情请查看 源代码，或者 demo。
 ```javascript
