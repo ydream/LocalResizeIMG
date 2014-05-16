@@ -11,6 +11,7 @@
     $.fn.localResizeIMG = function (obj) {
         this.on('change', function () {
             var file = this.files[0];
+            var URL = URL || webkitURL;
             var blob = URL.createObjectURL(file);
 
             // 执行前函数

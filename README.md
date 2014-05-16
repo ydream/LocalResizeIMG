@@ -38,5 +38,4 @@ LocalResizeIMG
 
 > ##### 技术： jquery
 > ##### 时间： 2014年5月
-> ##### 源码： [Guthub](https://github.com/think2011/LocalResizeIMG)
 > ##### 博客： [think2011](http://think2011.github.io)
